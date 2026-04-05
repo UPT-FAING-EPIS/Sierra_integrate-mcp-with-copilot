@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="animated-background"></div>
+    <svg class="git-branches" viewBox="0 0 800 600" preserveAspectRatio="none">
+      <defs>
+        <style>
+          .branch-line { stroke: #32CD32; stroke-width: 2; opacity: 0.3; }
+          @keyframes drawBranch { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+          .animated { animation: drawBranch 8s ease-in-out infinite; stroke-dasharray: 1000; }
+        </style>
+      </defs>
+      <path class="branch-line animated" d="M 100,100 Q 200,150 300,100" />
+      <path class="branch-line animated" d="M 500,200 Q 600,250 700,200" style="animation-delay: 0.5s;" />
+      <path class="branch-line animated" d="M 150,400 Q 250,350 350,400" style="animation-delay: 1s;" />
+      <path class="branch-line animated" d="M 450,500 Q 550,450 650,500" style="animation-delay: 1.5s;" />
+    </svg>
     <header>
+      <img src="https://octodex.github.com/images/original.png" alt="GitHub Octocat" class="mascot mascot-left" />
+      <img src="https://octodex.github.com/images/Professortocat_v2.png" alt="Professor Octocat" class="mascot mascot-right" />
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
